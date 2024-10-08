@@ -7,6 +7,10 @@ import Slider from 'react-slick'
 import { slideProps } from '../../../globalTypes';
 import Image from 'next/image';
 
+interface ArrowProps {
+    onClick?: () => void;
+}
+
 const info: slideProps[] = [
     {
         title: 'Title 1',
@@ -25,7 +29,7 @@ const info: slideProps[] = [
     },
 ]
 
-function SampleNextArrow(props: any) {
+function SampleNextArrow(props: ArrowProps) {
     const { onClick } = props;
     return (
         <Image
@@ -39,7 +43,7 @@ function SampleNextArrow(props: any) {
     );
 }
 
-function SamplePrevArrow(props: any) {
+function SamplePrevArrow(props: ArrowProps) {
     const { onClick } = props;
     return (
         <Image
