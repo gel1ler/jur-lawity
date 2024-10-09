@@ -1,5 +1,5 @@
 import Carousel from "@/components/carousel/carousel";
-import CarouselV2 from "@/components/carousel/carouselV2";
+// import CarouselV2 from "@/components/carousel/carouselV2";
 import Hero from "@/components/hero";
 import Price from "@/components/price";
 import Title from "@/components/title";
