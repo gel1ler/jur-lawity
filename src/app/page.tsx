@@ -1,4 +1,5 @@
 import Carousel from "@/components/carousel/carousel";
+import CarouselV2 from "@/components/carousel/carouselV2";
 import Hero from "@/components/hero";
 import Price from "@/components/price";
 import Title from "@/components/title";
@@ -9,42 +10,42 @@ export default function Home() {
     <div >
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Hero />
-        <section className="h-screen py-10 flex flex-col items-center w-full gap-5">
+        <section className="h-screen py-10 flex flex-col items-center w-screen gap-5">
           <Title subtitle="СИСТЕМЫ LAWITY" centered>Вся работа в одном месте</Title>
           <Carousel />
         </section>
 
         {/* Кейсы */}
-        <section className="h-screen py-32 w-full flex justify-center gap-5 bg-gray-100">
+        <section className="py-32 w-full flex justify-center gap-5 bg-gray-100">
           <div className="flex flex-col items-center max-w-7xl">
             <Title>Успешные кейсы</Title>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 grid-rows-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 grid-rows-2 mt-10">
               {/* 1 */}
               <div className="bg-white p-6 rounded-lg shadow-md md:col-span-2">
                 <h3 className="text-xl font-semibold mb-4">Кейс 1: Управление клиентами</h3>
                 <p className="text-gray-600">
-                  Юридическая фирма "Право+" использует Lawity CRM для централизованного управления клиентами и делами. Это позволило им сократить время на обработку заявок и повысить удовлетворенность клиентов.
+                  Юридическая фирма &quot;Право+&quot; использует Lawity CRM для централизованного управления клиентами и делами. Это позволило им сократить время на обработку заявок и повысить удовлетворенность клиентов.
                 </p>
               </div>
               {/* 2 */}
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-4">Кейс 2: Автоматизация документооборота</h3>
                 <p className="text-gray-600">
-                  Фирма "Юрист-Плюс" внедрила Lawity CRM для автоматизации документооборота. Теперь все документы хранятся в единой базе данных, что значительно упростило работу с документами.
+                  Фирма &quot;Юрист-Плюс&quot; внедрила Lawity CRM для автоматизации документооборота. Теперь все документы хранятся в единой базе данных, что значительно упростило работу с документами.
                 </p>
               </div>
               {/* 3 */}
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-4">Кейс 3: Автоматизация документооборота</h3>
                 <p className="text-gray-600">
-                  Фирма "Юрист-Плюс" внедрила Lawity CRM для автоматизации документооборота. Теперь все документы хранятся в единой базе данных, что значительно упростило работу с документами.
+                  Фирма &quot;Юрист-Плюс&quot; внедрила Lawity CRM для автоматизации документооборота. Теперь все документы хранятся в единой базе данных, что значительно упростило работу с документами.
                 </p>
               </div>
               {/* 4 */}
               <div className="bg-white p-6 rounded-lg shadow-md md:col-span-2">
                 <h3 className="text-xl font-semibold mb-4">Кейс 4: Управление клиентами</h3>
                 <p className="text-gray-600">
-                  Юридическая фирма "Право+" использует Lawity CRM для централизованного управления клиентами и делами. Это позволило им сократить время на обработку заявок и повысить удовлетворенность клиентов.
+                  Юридическая фирма &quot;Право+&quot; использует Lawity CRM для централизованного управления клиентами и делами. Это позволило им сократить время на обработку заявок и повысить удовлетворенность клиентов.
                 </p>
               </div>
             </div>
@@ -54,8 +55,8 @@ export default function Home() {
         {/* Преимущества */}
         <section className="py-20 w-full flex justify-center bg-white">
           <div className="flex flex-col max-w-7xl">
-            <Title>Почему выбирают Lawity CRM?</Title>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Title centered>Почему выбирают Lawity CRM?</Title>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
               <div className="flex flex-col items-center text-center">
                 <Image src="/icons/integration.svg" alt="Интеграция" width={64} height={64} />
                 <h3 className="text-xl font-semibold mt-4">Гибкая интеграция</h3>
@@ -78,49 +79,8 @@ export default function Home() {
         {/* Цены */}
         <section className="py-20 w-full flex justify-center bg-gray-100">
           <div className="flex flex-col max-w-7xl">
-            <Title>Тарифные планы</Title>
+            <Title centered>Тарифные планы</Title>
             <Price />
-            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 scale-95">
-              <div className=" p-6 rounded-lg text-center">
-                <h3 className="text-xl font-semibold mb-4">Базовый</h3>
-                <p className="text-gray-600">Подходит для небольших юридических фирм.</p>
-                <ul className="text-gray-600 mt-4 text-center">
-                  <li>Управление клиентами</li>
-                  <li>Базовый документооборот</li>
-                  <li>Поддержка по email</li>
-                  <li>До 5 пользователей</li>
-                </ul>
-                <p className="text-3xl font-bold mt-4">$99/месяц</p>
-                <button className="bg-blue-500 text-white p-3 rounded-lg mt-4">Выбрать</button>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <p className="text-gray-400">Рекомендованно</p>
-                <h3 className="text-xl font-semibold mb-4">Профессиональный</h3>
-                <p className="text-gray-600">Для средних и крупных юридических фирм.</p>
-                <ul className="text-left text-gray-600 mt-4">
-                  <li>Управление клиентами</li>
-                  <li>Расширенный документооборот</li>
-                  <li>Круглосуточная поддержка</li>
-                  <li>До 20 пользователей</li>
-                </ul>
-                <p className="text-3xl font-bold mt-4">$199/месяц</p>
-                <button className="bg-blue-500 text-white p-3 rounded-lg mt-4">Выбрать</button>
-              </div>
-
-              <div className="p-6 rounded-lg text-center scale-95">
-                <h3 className="text-xl font-semibold mb-4">Корпоративный</h3>
-                <p className="text-gray-600">Для крупных юридических компаний.</p>
-                <ul className="text-left text-gray-600 mt-4">
-                  <li>Управление клиентами</li>
-                  <li>Расширенный документооборот</li>
-                  <li>Круглосуточная поддержка</li>
-                  <li>Неограниченное количество пользователей</li>
-                </ul>
-                <p className="text-3xl font-bold mt-4">$299/месяц</p>
-                <button className="bg-blue-500 text-white p-3 rounded-lg mt-4">Выбрать</button>
-              </div>
-            </div> */}
           </div>
         </section>
 
@@ -131,15 +91,15 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-gray-600">
-                  "Lawity CRM значительно упростила нашу работу. Теперь все дела и документы находятся в одном месте, и мы можем быстро находить нужную информацию."
+                &quot;Lawity CRM значительно упростила нашу работу. Теперь все дела и документы находятся в одном месте, и мы можем быстро находить нужную информацию.&quot;
                 </p>
-                <p className="text-right mt-4">- Анна Иванова, "Право+"</p>
+                <p className="text-right mt-4">- Анна Иванова, &quot;Право+&quot;</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-gray-600">
-                  "Отличная система! Нам очень понравилась поддержка и гибкость настроек. Рекомендуем всем юридическим фирмам."
+                &quot;Отличная система! Нам очень понравилась поддержка и гибкость настроек. Рекомендуем всем юридическим фирмам.&quot;
                 </p>
-                <p className="text-right mt-4">- Петр Петров, "Юрист-Плюс"</p>
+                <p className="text-right mt-4">- Петр Петров, &quot;Юрист-Плюс&quot;</p>
               </div>
             </div>
           </div>

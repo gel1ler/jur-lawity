@@ -30,6 +30,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { slide as Menu } from 'react-burger-menu'
+import Drawer from './drawer'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,26 +56,7 @@ const Header = () => {
                     <li className='underlined'><a href='#'>Контакты</a></li>
                 </ul>
             </nav>
-            <div className='md:hidden'>
-                <button onClick={handleMenuToggle}>
-                    {/* {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />} */}
-                    {isMenuOpen ? 1 : 2}
-                </button>
-            </div>
-            <Menu
-                isOpen={isMenuOpen}
-                onClose={handleMenuToggle}
-                right
-                width={280}
-                className='md:hidden'
-            >
-                <ul className='flex flex-col gap-6 items-center'>
-                    <li className='underlined'><a href='#'>Возможности</a></li>
-                    <li className='underlined'><a href='#'>Тарифы</a></li>
-                    <li className='underlined'><a href='#'>Успешные кейсы</a></li>
-                    <li className='underlined'><a href='#'>Контакты</a></li>
-                </ul>
-            </Menu>
+            <Drawer />
         </header>
     )
 }

@@ -42,7 +42,7 @@ function SampleNextArrow(props: ArrowProps) {
             width={100}
             height={100}
             alt='Right arrow'
-            className='z-10 hover:translate-x-2 transition-transform absolute right-40 top-1/2 -translate-y-1/2 cursor-pointer'
+            className='z-10 hover:translate-x-2 transition-transform absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer'
             onClick={onClick}
         />
     );
@@ -56,7 +56,7 @@ function SamplePrevArrow(props: ArrowProps) {
             width={100}
             height={100}
             alt='Left arrow'
-            className='z-10 hover:-translate-x-2 transition-transform absolute left-40 top-1/2 -translate-y-1/2 cursor-pointer'
+            className='z-10 hover:-translate-x-2 transition-transform absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer'
             onClick={onClick}
         />
     );
@@ -67,6 +67,7 @@ const Carousel = () => {
         centerMode: true,
         dots: true,
         infinite: true,
+        fade: true,
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
