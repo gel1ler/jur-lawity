@@ -30,6 +30,10 @@ button {
   font-weight: 600;
 }
 
+button.bordered {
+  @apply hover:border-gray-400 border border-transparent;
+}
+
 @layer components {
   h1 {
     @apply text-6xl font-bold text-gray-900 mb-4;

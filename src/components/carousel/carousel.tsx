@@ -13,17 +13,22 @@ interface ArrowProps {
 
 const info: slideProps[] = [
     {
-        title: 'Title 1',
+        title: 'Управление клиентами и делами',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, urna vel mattis elementum, urna neque condimentum velit, in finibus velit ligula non neque.',
         image: 'https://dummyimage.com/600x400/000/fff',
     },
     {
-        title: 'Title 2',
+        title: 'Планирование и отслеживание задач',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, urna vel mattis elementum, urna neque condimentum velit, in finibus velit ligula non neque.',
         image: 'https://dummyimage.com/600x400/d95ed9/fff',
     },
     {
-        title: 'Title 3',
+        title: 'Хранение и поиск документов',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, urna vel mattis elementum, urna neque condimentum velit, in finibus velit ligula non neque.',
+        image: 'https://dummyimage.com/600x400/5fd972/fff',
+    },
+    {
+        title: 'Отчетность и аналитика',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, urna vel mattis elementum, urna neque condimentum velit, in finibus velit ligula non neque.',
         image: 'https://dummyimage.com/600x400/5fd972/fff',
     },
@@ -36,7 +41,7 @@ function SampleNextArrow(props: ArrowProps) {
             src='/right-arrow.svg'
             width={100}
             height={100}
-            alt='Left arrow'
+            alt='Right arrow'
             className='z-10 hover:translate-x-2 transition-transform absolute right-40 top-1/2 -translate-y-1/2 cursor-pointer'
             onClick={onClick}
         />
